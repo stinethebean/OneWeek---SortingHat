@@ -1,6 +1,7 @@
 function submitUrl() {
         var origimgurl = $('input:first').val()
         $('#container').html('');
+        $('#ontop').html('');
         $('<img>', { src: origimgurl, style: 'opacity:1' }).appendTo('#container');
         var params = {
         //we don't need parameters for this call
