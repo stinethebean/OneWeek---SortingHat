@@ -3,6 +3,7 @@ function submitUrl() {
         $('#container').html('');
         $('#ontop').html('');
         $('<img>', { src: origimgurl, style: 'opacity:1' }).appendTo('#container');
+
         var params = {
         //we don't need parameters for this call
         };
@@ -36,7 +37,7 @@ function submitUrl() {
 
 //Use the face scores to deterine which house the face belongs in
     function determineHouse(face){
-        
+            
         
         var grif = 0 + face.scores.surprise + face.scores.anger;
         var sly= 0 + face.scores.contempt  + face.scores.disgust;
@@ -57,21 +58,21 @@ function submitUrl() {
         if ( grif > sly && grif > huff && grif > rave ) { house = "G";
             $('<div>', {
                  class: 'house',
-                 style: 'background-image: url("Gryffindor.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: relative;'  }).appendTo('#ontop');
+                 style: 'background-image: url("Gryffindor.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: fixed;'  }).appendTo('#ontop');
        console.log("appended to Gryff");}
 
        // if slytherin
         if (sly >grif && sly>huff & sly > rave) {house ="S"; 
        $('<div>', {
                  class: 'house',
-                 style: 'background-image: url("Slytherin.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: relative;'  }).appendTo('#ontop');
+                 style: 'background-image: url("Slytherin.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: fixed;'  }).appendTo('#ontop');
        console.log("appended to Sly");}
 
        //if Huff
         if (huff> grif && huff > sly && huff >rave) {house = "H"; 
         $('<div>', {
                  class: 'house',
-                 style: 'background-image: url("Hufflepuff.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: relative;'  }).appendTo('#ontop');
+                 style: 'background-image: url("Hufflepuff.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: fixed;'  }).appendTo('#ontop');
        console.log("appended to Huff");}
 
 
@@ -79,7 +80,7 @@ function submitUrl() {
         if (rave > grif && rave > sly && rave> huff) {house ="R"; 
         $('<div>', {
                  class: 'house',
-                 style: 'background-image: url("RavenClaw.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: relative;'  }).appendTo('#ontop');
+                 style: 'background-image: url("RavenClaw.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: fixed;'  }).appendTo('#ontop');
        console.log("appended to Raven");}
 
        $('ontop').css("height: 0px;");
