@@ -44,10 +44,15 @@ function submitUrl() {
         console.log('rave' + rave)
         var house
 
-        if ( grif > sly && grif > huff && grif > rave ) { house = "G";}
-        if (sly >grif && sly>huff & sly > rave) {house ="S";}
-        if (huff> grif && huff > sly && huff >rave) {house = "H"; }   
-        if (rave > grif && rave > sly && rave> huff) {house ="R";}
+        if ( grif > sly && grif > huff && grif > rave ) { house = "G";
+    $('<img>', { src: 'Gryffindor.jpg', style: 'opacity:1' }).appendTo('#ontop');
+       console.log("appended to");}
+        if (sly >grif && sly>huff & sly > rave) {house ="S"; $('<img>', { src: 'Slytherin.jpg', style: 'opacity:1' }).appendTo('#ontop');
+       console.log("appended to")}
+        if (huff> grif && huff > sly && huff >rave) {house = "H"; $('<img>', { src: 'Hufflepuff.jpg', style: 'opacity:1' }).appendTo('#ontop');
+       console.log("appended to") }   
+        if (rave > grif && rave > sly && rave> huff) {house ="R"; $('<img>', { src: 'RavenClaw.jpg', style: 'opacity:1' }).appendTo('#ontop');
+       console.log("appended to")}
     }
 
     function emotionMath(face){
@@ -56,8 +61,8 @@ function submitUrl() {
         var faceCenter = face.faceRectangle.left - .5*face.faceRectangle.width;
         
         //need to figure out how to put House Logo on people's foreheads
-        $('<img>', { src: 'Gryffindor.jpg', style: 'opacity:1' }).appendTo('#ontop');
-       console.log("appended to")
+    //     $('<img>', { src: 'Gryffindor.jpg', style: 'opacity:1' }).appendTo('#ontop');
+    //    console.log("appended to")
 
     }
 
