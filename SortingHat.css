@@ -9,6 +9,7 @@
 div#ontop {
     z-index: 20;
     position: fixed;
+    height: 0;
     }
         
 div#container {
@@ -30,37 +31,12 @@ div#textcontainer {
     }
         
 
-div.gryffindor {
-    background-image: url('Gryffindor.jpg');
+div.house {
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
-    z-index: 20;
+    z-index: 22;
     opacity: 1;
-    }
-
-div.ravenclaw {
-    background-image: url('RavenClaw.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    z-index: 20;
-    }
-
-div.hufflepuff {
-    background-image: url('Hufflepuff.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    z-index: 20;
-    }
-
-div.slytherin {
-    background-image: url('Slytherin.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    z-index: 20;
     }
     
 div#text {

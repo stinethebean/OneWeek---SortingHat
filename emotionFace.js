@@ -24,7 +24,7 @@ function submitUrl() {
             //run through each face data
              for (i = 0; i < data.length; i++) {
                 face = data[i];
-                emotionMath(face);
+            determineHouse(face);
             }
         })
         .fail(function(data, url) {
@@ -36,6 +36,8 @@ function submitUrl() {
 
 //Use the face scores to deterine which house the face belongs in
     function determineHouse(face){
+        
+        
         var grif = 0 + face.scores.surprise + face.scores.anger;
         var sly= 0 + face.scores.contempt  + face.scores.disgust;
         console.log('sly' + sly)
@@ -45,25 +47,42 @@ function submitUrl() {
         console.log('rave' + rave)
         var house
 
+        var forehead = face.faceRectangle.top + .1 * face.faceRectangle.height;
+        var houseSize = face.faceRectangle.height * .5;
+        var faceCenter = face.faceRectangle.left - .5*houseSize + .5*face.faceRectangle.width;
+        var faceScale = face.faceRectangle.height / face.faceRectangle.width;
+
+
+        //if gryffindor
         if ( grif > sly && grif > huff && grif > rave ) { house = "G";
-    $('<img>', { src: 'Gryffindor.jpg', style: 'opacity:1' }).appendTo('#ontop');
-       console.log("appended to");}
-        if (sly >grif && sly>huff & sly > rave) {house ="S"; $('<img>', { src: 'Slytherin.jpg', style: 'opacity:1' }).appendTo('#ontop');
-       console.log("appended to")}
-        if (huff> grif && huff > sly && huff >rave) {house = "H"; $('<img>', { src: 'Hufflepuff.jpg', style: 'opacity:1' }).appendTo('#ontop');
-       console.log("appended to") }   
-        if (rave > grif && rave > sly && rave> huff) {house ="R"; $('<img>', { src: 'RavenClaw.jpg', style: 'opacity:1' }).appendTo('#ontop');
-       console.log("appended to")}
+            $('<div>', {
+                 class: 'house',
+                 style: 'background-image: url("Gryffindor.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: relative;'  }).appendTo('#ontop');
+       console.log("appended to Gryff");}
+
+       // if slytherin
+        if (sly >grif && sly>huff & sly > rave) {house ="S"; 
+       $('<div>', {
+                 class: 'house',
+                 style: 'background-image: url("Slytherin.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: relative;'  }).appendTo('#ontop');
+       console.log("appended to Sly");}
+
+       //if Huff
+        if (huff> grif && huff > sly && huff >rave) {house = "H"; 
+        $('<div>', {
+                 class: 'house',
+                 style: 'background-image: url("Hufflepuff.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: relative;'  }).appendTo('#ontop');
+       console.log("appended to Huff");}
+
+
+       //if Raven
+        if (rave > grif && rave > sly && rave> huff) {house ="R"; 
+        $('<div>', {
+                 class: 'house',
+                 style: 'background-image: url("RavenClaw.jpg"); top: ' + forehead + 'px; left: ' + faceCenter + 'px; opacity:1; background-size: ' + houseSize + 'px; width: ' +houseSize+'px; height: '+houseSize+ 'px; position: relative;'  }).appendTo('#ontop');
+       console.log("appended to Raven");}
+
+       $('ontop').css("height: 0px;");
     }
 
-    function emotionMath(face){
-        determineHouse(face);
-        var forehead = face.faceRectangle.top - .1 * face.faceRectangle.height;
-        var faceCenter = face.faceRectangle.left - .5*face.faceRectangle.width;
-        
-        //need to figure out how to put House Logo on people's foreheads
-    //     $('<img>', { src: 'Gryffindor.jpg', style: 'opacity:1' }).appendTo('#ontop');
-    //    console.log("appended to")
-
-    }
 
