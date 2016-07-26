@@ -38,20 +38,6 @@ div.house {
     z-index: 22;
     opacity: 1;
     }
-    
-div#text {
-    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
-    text-shadow:
-        -2px -2px 0 white,  
-        2px -2px 0 white,
-        -2px 2px 0 white,
-        2px 2px 0 white;
-    z-index: 30;
-    margin: auto;
-    text-align: center;
-    z-index: 20;
-    position: relative;
-    }
 
 form {
     width: 100%;
@@ -60,10 +46,6 @@ form {
     position: relative;
 }
 
-img#dealwithitbot {
-    max-height: 50vh;
-    max-width: 70vw;   
-}
 
 input[type=url] {
     width: 60%;
