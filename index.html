@@ -1,16 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <meta name="viewport" content="maximum-scale=1, user-scalable=no">
-
 <head>
-    <title>Sorting Hat!</title>
-    <!--<link rel="stylesheet" type="text/css" href="css/dealwithit.css">-->
-
+    <title>Sorting Hat!</title>   
+    <link href="https://fonts.googleapis.com/css?family=Montez|Raleway" rel="stylesheet"> 
 </head>
 
+<style>
+    h1{font-family: 'Montez', cursive;
+       text-shadow: 1px 1px darkgoldenrod}
+    h3{font-family: 'Raleway', cursive;
+    text-shadow: 1px 1px antiquewhite}
+</style>
 
-<body>
-    <div id="ontop"></div>
+<body style="background: url('castle.jpg'); background-size: 100% 100%">
+    <div id="ontop" style="padding-top:10px"></div>
     <div id="textcontainer">
         <div id="text"></div>
     </div>
@@ -23,6 +27,10 @@
             <input type="submit" value="Sort your friends!">
         </div>
     </form>
+    <div id = "label" style="background-color:black; margin:10; text-align:center; bottom:0px; position:fixed; width:100%">
+        <h1 style="color:antiquewhite"> Find Your Hogwarts House! </h1>
+        <h3 style="color:goldenrod"> This sorting app uses the Microsoft Cognitive Services API to detect emotions in photos to find you your spot at Hogwarts School of Witchcraft and Wizardry. </h3>
+    </div>
     <footer>
         
     </footer>

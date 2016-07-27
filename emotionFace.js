@@ -48,9 +48,9 @@ function submitUrl() {
         console.log('rave' + rave)
         var house
 
-        var forehead = face.faceRectangle.top - .4 * face.faceRectangle.height;
+        var forehead = face.faceRectangle.top - .4 * face.faceRectangle.height + 10;
         var houseSize = face.faceRectangle.height * .4;
-        var faceCenter = face.faceRectangle.left - .5*houseSize + .5*face.faceRectangle.width;
+        var faceCenter = face.faceRectangle.left - .5*houseSize + .5*face.faceRectangle.width +10;
         var faceScale = face.faceRectangle.height / face.faceRectangle.width;
 
 
