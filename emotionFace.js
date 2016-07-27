@@ -41,11 +41,8 @@ function submitUrl() {
         
         var grif = 0 + face.scores.surprise + face.scores.anger;
         var sly= 0 + face.scores.contempt  + face.scores.disgust;
-        console.log('sly' + sly)
         var huff = 0+ face.scores.happiness + face.scores.fear;
-        console.log('huff' + huff)
         var rave = 0 + face.scores.neutral + face.scores.sadness;
-        console.log('rave' + rave)
         var house
 
         var forehead = face.faceRectangle.top - .4 * face.faceRectangle.height + 10;
