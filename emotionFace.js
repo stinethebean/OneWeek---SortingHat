@@ -21,7 +21,7 @@ function submitUrl() {
         })
         .done(function(data) {
             console.log(data)
-            alert("success");
+            alert("The Hat Has Decided");
             //run through each face data
              for (i = 0; i < data.length; i++) {
                 face = data[i];
