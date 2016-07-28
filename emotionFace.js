@@ -39,10 +39,10 @@ function submitUrl() {
     function determineHouse(face){
             
         
-        var grif = 0 + face.scores.surprise + face.scores.anger;
-        var sly= 0 + face.scores.contempt  + face.scores.disgust;
-        var huff = 0+ face.scores.happiness + face.scores.fear;
-        var rave = 0 + face.scores.neutral + face.scores.sadness;
+        var grif = 0 + face.scores.surprise + face.scores.anger +Math.random() - Math.Random();
+        var sly= 0 + face.scores.contempt  + face.scores.disgust +Math.random() - Math.Random();
+        var huff = 0+ face.scores.happiness + face.scores.fear +Math.random() - Math.Random();
+        var rave = 0 + face.scores.neutral + face.scores.sadness+Math.random() - Math.Random();
         var house
 
         var forehead = face.faceRectangle.top - .4 * face.faceRectangle.height + 10;
