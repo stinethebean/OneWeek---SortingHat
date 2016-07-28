@@ -40,9 +40,13 @@ function submitUrl() {
             
         
         var grif = 0 + face.scores.surprise + face.scores.anger +Math.random() - Math.Random();
+        console.log(grif +"g")
         var sly= 0 + face.scores.contempt  + face.scores.disgust +Math.random() - Math.Random();
+        console.log(sly+"s")
         var huff = 0+ face.scores.happiness + face.scores.fear +Math.random() - Math.Random();
+        console.log(sly+"h")
         var rave = 0 + face.scores.neutral + face.scores.sadness+Math.random() - Math.Random();
+        console.log(sly+"r")
         var house
 
         var forehead = face.faceRectangle.top - .4 * face.faceRectangle.height + 10;
