@@ -38,14 +38,19 @@ function submitUrl() {
 //Use the face scores to deterine which house the face belongs in
     function determineHouse(face){
             
+        //adding some randomization variables
+        var off1 = Math.random();
+        var off2 = Math.random();
+        var off3 = Math.random();
+        var off4 = Math.random();
         
-        var grif = 0 + face.scores.surprise + face.scores.anger;
+        var grif = 0 + face.scores.surprise + face.scores.anger + 2*off1;
         console.log(grif +"g")
-        var sly= 0 + face.scores.contempt  + face.scores.disgust;
+        var sly= 0 + face.scores.contempt  + face.scores.disgust + 2*off2;
         console.log(sly+"s")
-        var huff = 0+ face.scores.happiness + face.scores.fear;
+        var huff = 0+ face.scores.happiness + face.scores.fear + 2*off3;
         console.log(sly+"h")
-        var rave = 0 + face.scores.neutral + face.scores.sadness;
+        var rave = 0 + face.scores.neutral + face.scores.sadness + 2*off4;
         console.log(sly+"r")
         var house
 
